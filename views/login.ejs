@@ -1,0 +1,28 @@
+<%- include('./partials/Header.ejs') %>
+<%- include('./partials/Navbar.ejs') %>
+<div class="container ">
+    <div class="row mt-3">
+        <h1 class="text text-primary text text-center bg-light-subtle  p-1">This is Login Page</h1>
+        <% if (message) { %>
+         <div class="alert alert-danger">
+          <%= message %>
+         </div>
+        <% } %>
+        <hr>
+        <form method="post"  class="form-control p-4 shadow-lg m-5">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1"  name="password">
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+            <a href="/user/registration" class="text-decoration-none">Dont have an account</a>
+          </form>
+
+    </div>
+</div>
+
+<%- include('./partials/Footer.ejs') %>
